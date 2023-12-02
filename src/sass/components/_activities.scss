@@ -1,0 +1,32 @@
+.activities {
+  @media (max-width: 1200px) {
+    & {
+      display: none;
+    }
+  }
+
+  &__second-header {
+    padding-top: 94px;
+  }
+  &__li {
+    position: relative;
+  }
+  &__img {
+    display: block;
+  }
+  &__title {
+    font-size: 14px;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    z-index: 2;
+    padding: 27px 90px;
+    width: 370px;
+    height: 70px;
+    color: $white-color;
+    bottom: 0;
+  }
+}

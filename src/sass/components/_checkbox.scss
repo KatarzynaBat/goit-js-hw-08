@@ -1,0 +1,31 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $gray-color;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  &__input {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    color: $black-color;
+    margin-right: 7px;
+    border: 1.7px solid;
+    appearance: none;
+  }
+  &__input:checked {
+    border: 0px;
+    background-color: $blue-color;
+  }
+  &__icon {
+    position: absolute;
+    left: 2px;
+    fill: white;
+  }
+}

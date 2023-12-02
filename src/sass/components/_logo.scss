@@ -1,0 +1,26 @@
+.logo {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  @media (max-width: 1200px) {
+    & {
+      display: block;
+      text-align: center;
+    }
+  }
+  &--black {
+    color: $dark-black-color;
+  }
+  &__span--blue {
+    color: $blue-color;
+  }
+  &--blue {
+    color: $blue-color;
+  }
+  &__span--white {
+    color: $white-color;
+  }
+}

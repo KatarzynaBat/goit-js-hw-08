@@ -1,0 +1,47 @@
+.contact {
+  @media (max-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+  &__details {
+    color: $gray-color;
+    text-decoration: none;
+    font-style: normal;
+    min-width: max-content;
+  }
+  &__details--mail {
+    margin-right: 30px;
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: $gray-color;
+  }
+
+  &__details:hover .contact__icon,
+  &__details:focus .contact__icon {
+    fill: $blue-color;
+  }
+
+  &__details:hover,
+  &__details:focus {
+    color: $blue-color;
+    cursor: pointer;
+  }
+
+  &-details--bottom {
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $transparent-grey-color;
+  }
+
+  &-details--bottom {
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $transparent-grey-color;
+  }
+}

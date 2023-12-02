@@ -1,0 +1,64 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__label,
+  &__input {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+  }
+  &__label {
+    margin: 0 40px;
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.01em;
+    color: $gray-color;
+    position: relative;
+  }
+  &__label:hover .form__icon,
+  &__label:focus-within .form__icon {
+    fill: $blue-color;
+  }
+  &__label:hover .form__input,
+  &__label:focus-within .form__input,
+  &__label:active .form__input,
+  &__input:hover,
+  &__input:focus-within,
+  &__input:active {
+    border-color: $blue-color;
+    outline: none;
+  }
+  &__input {
+    min-height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $gray-color;
+    padding-left: 42px;
+  }
+  &__input.form__input--comment {
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.01em;
+  }
+  &__input.form__input--comment::placeholder {
+    color: $modal-contact-grey-color;
+  }
+  &__icon {
+    fill: $black-color;
+    position: absolute;
+    top: calc((100% + 6px) / 2);
+    left: 14px;
+  }
+}
+
+.form__label + .form__label {
+  margin-top: 10px;
+}

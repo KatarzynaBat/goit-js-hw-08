@@ -1,0 +1,37 @@
+.navigation__a,
+.contact__details,
+.mobile-nav__a {
+  transition: color 250ms;
+  transition-timing-function: $transition;
+}
+
+.social__circle {
+  transition: background-color 250ms;
+  transition-timing-function: $transition;
+}
+.checkbox__input {
+  transition-property: border, background-color;
+  transition-timing-function: $transition;
+  transition-duration: 250ms;
+}
+.contact__icon,
+.client__logo,
+.social__icon,
+.contact-form__icon {
+  transition: fill 250ms;
+  transition-timing-function: $transition;
+}
+.client__logo-frame,
+.contact-details-input {
+  transition: border 250ms;
+  transition-timing-function: $transition;
+}
+.portfolio__filter-button {
+  transition-property: color, background-color, box-shadow;
+  transition-timing-function: $transition;
+  transition-duration: 250ms;
+}
+.portfolio__card {
+  transition: box-shadow 250ms;
+  transition-timing-function: $transition;
+}

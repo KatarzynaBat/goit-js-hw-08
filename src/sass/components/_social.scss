@@ -1,0 +1,31 @@
+.social {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+
+  &__circle {
+    height: 44px;
+    width: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &__circle:hover,
+  &__circle:focus {
+    background-color: $blue-color;
+  }
+  &__circle:hover .social__icon,
+  &__circle:focus .social__icon {
+    fill: $white-color;
+  }
+
+  &__icon {
+    fill: $svg-grey-color;
+  }
+
+  &__icon--white {
+    fill: $white-color;
+  }
+}

@@ -1,0 +1,40 @@
+.description {
+  &__box-icon {
+    padding: 25px 0;
+    margin-bottom: 30px;
+    background-color: $light-background-color;
+    border-radius: 4px;
+  }
+
+  &__icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__header {
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 768px) {
+    &__header {
+      text-align: center;
+    }
+  }
+  &__paragraph {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $gray-color;
+  }
+  @media (min-width: 768px) {
+    &__li {
+      max-width: 40%;
+    }
+  }
+  @media (min-width: 1200px) {
+    &__li {
+      max-width: 270px;
+    }
+  }
+}
