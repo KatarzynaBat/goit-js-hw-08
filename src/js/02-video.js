@@ -1,7 +1,8 @@
-const iframe = document.querySelector('iframe');
 import Player from '@vimeo/player';
-const player = new Player(iframe);
 import throttle from 'lodash.throttle';
+const iframe = document.querySelector('iframe');
+
+const player = new Player(iframe);
 
 player.on('play', function () {
   console.log('played the video!');
@@ -38,6 +39,6 @@ const update = function () {
       }
     });
 };
+window.addEventListener('DOMContentLoaded', update);
 
 player.on('timeupdate', throttle(timePlayed, 1000));
-player.on('play', update);

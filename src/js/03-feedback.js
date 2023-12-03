@@ -12,20 +12,20 @@ const saveData = throttle(event => {
   localStorage.setItem('feedback-form-state', JSON.stringify(data));
 }, 500);
 
+const updateData = () => {
+  const lastData = JSON.parse(localStorage.getItem('feedback-form-state'));
+  form.email.value = lastData.email;
+  form.message.value = lastData.message;
+  data.message = lastData.message;
+  data.email = lastData.email;
+};
+window.addEventListener('DOMContentLoaded', updateData);
+
 const clearData = event => {
   event.preventDefault();
   console.log(localStorage.getItem('feedback-form-state'));
   localStorage.clear();
   form.reset();
 };
-const updateData = () => {
-  const localData = JSON.parse(localStorage.getItem('feedback-form-state'));
-  if (localData) {
-    form.email.value = localData.email;
-    form.message.value = localData.message;
-  } else form.reset();
-};
-updateData();
-
 form.addEventListener('input', saveData);
 form.addEventListener('submit', clearData);
