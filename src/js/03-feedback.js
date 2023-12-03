@@ -13,11 +13,15 @@ const saveData = throttle(event => {
 }, 500);
 
 const updateData = () => {
-  const lastData = JSON.parse(localStorage.getItem('feedback-form-state'));
-  form.email.value = lastData.email;
-  form.message.value = lastData.message;
-  data.message = lastData.message;
-  data.email = lastData.email;
+  if (JSON.parse(localStorage.getItem('feedback-form-state')) === null) {
+    return;
+  } else {
+    const lastData = JSON.parse(localStorage.getItem('feedback-form-state'));
+    form.email.value = lastData.email;
+    form.message.value = lastData.message;
+    data.message = lastData.message;
+    data.email = lastData.email;
+  }
 };
 window.addEventListener('DOMContentLoaded', updateData);
 
